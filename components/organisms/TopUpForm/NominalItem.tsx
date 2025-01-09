@@ -1,4 +1,4 @@
-import NumberFormat from 'react-number-format';
+import { NumericFormat } from "react-number-format";
 
 interface NominalItemProps {
     _id: string;
@@ -43,7 +43,7 @@ export default function NominalItem(props: NominalItemProps) {
           </svg>
         </div>
         <p className="text-lg color-palette-1 m-0">
-          <NumberFormat
+          <NumericFormat
             value={price}
             prefix="Rp. "
             displayType="text"
