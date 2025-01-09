@@ -15,7 +15,7 @@ export default function GameItem(props: GameItemProps) {
     <div className="featured-game-card position-relative">
       <Link href={`/detail/${id}`}>
           <div className="blur-sharp">
-            {/* [CODE UPDATE] menambahkan layout="fixed" untuk memperbaiki responsive di mobile */}
+
             <Image className="thumbnail" src={thumbnail} width={205} height={270} layout="fixed" alt="thumbnail" />
           </div>
           <div className="cover position-absolute bottom-0 m-32">
