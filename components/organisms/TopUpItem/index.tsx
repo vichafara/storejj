@@ -8,8 +8,13 @@ interface TopUpItemProps {
       }
     }
 }
-export default function TopUpItem(props : TopUpItemProps) {
+export default function TopUpItem(props: TopUpItemProps) {
   const { type, data } = props;
+
+  if (!data) {
+    // Handle the case where data is null or undefined (e.g., show a placeholder)
+    return <div>No data available</div>;
+  }
 
   const ROOT_IMG = process.env.NEXT_PUBLIC_IMG;
 
@@ -27,10 +32,16 @@ export default function TopUpItem(props : TopUpItemProps) {
       </div>
     );
   }
+
   return (
     <div className="row align-items-center">
       <div className="col-md-12 col-4">
-        <img src={`${ROOT_IMG}/${data.thumbnail}`} width="280" height="380" className="img-fluid" alt="" />
+        {/* Check if thumbnail exists */}
+        {data.thumbnail ? (
+          <img src={`${ROOT_IMG}/${data.thumbnail}`} width="280" height="380" className="img-fluid" alt={data.name} />
+        ) : (
+          <img src="/default-thumbnail.png" width="280" height="380" className="img-fluid" alt="Default" />
+        )}
       </div>
       <div className="col-md-12 col-8 d-md-none d-block">
         <h2 className="text-xl fw-bold color-palette-1 text-start mb-10">

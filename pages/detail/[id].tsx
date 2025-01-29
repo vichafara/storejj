@@ -58,16 +58,16 @@ interface GetStaticProps {
   params: {
     id: string;
   }
-}
+} 
 
 export async function getStaticProps({ params }: GetStaticProps) {
   const { id } = params;
   const data = await getDetailVoucher(id);
   return {
-    props: {
-      dataItem: data.detail,
-      nominals: data.detail.nominals,
-      payments: data.payment,
+   props: {
+      dataItem: data?.detail || null,
+    nominals: data?.nominals || [],
+      payments: data?.payment || [],
     },
   };
 }

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import NumberFormat from 'react-number-format';
+import { NumericFormat } from "react-number-format";
 import TableRow from './TableRow';
 import ButtonTab from './ButtonTab';
 import { getMemberTransactions } from '../../../services/member';
@@ -39,7 +39,7 @@ export default function TransactionContent() {
         <div className="mb-30">
           <p className="text-lg color-palette-2 mb-12">You’ve spent</p>
           <h3 className="text-5xl fw-medium color-palette-1">
-            <NumberFormat
+            <NumericFormat
               value={total}
               prefix="Rp. "
               displayType="text"

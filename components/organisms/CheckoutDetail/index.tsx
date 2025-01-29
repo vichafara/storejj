@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import NumberFormat from 'react-number-format';
+import { NumericFormat } from "react-number-format"; 
 
 export default function CheckoutDetail() {
   const [dataTopUp, setDataTopUp] = useState({
@@ -65,7 +65,7 @@ export default function CheckoutDetail() {
           Price
           {' '}
           <span className="purchase-details">
-            <NumberFormat
+            <NumericFormat
               value={itemPrice}
               prefix="Rp. "
               displayType="text"
@@ -79,7 +79,7 @@ export default function CheckoutDetail() {
           Tax (10%)
           {' '}
           <span className="purchase-details">
-            <NumberFormat
+            <NumericFormat
               value={tax}
               prefix="Rp. "
               displayType="text"
@@ -92,7 +92,7 @@ export default function CheckoutDetail() {
           Total
           {' '}
           <span className="purchase-details color-palette-4">
-            <NumberFormat
+            <NumericFormat
               value={totalPrice}
               prefix="Rp. "
               displayType="text"

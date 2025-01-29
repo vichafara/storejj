@@ -2,7 +2,7 @@ import { Meta } from '@storybook/react';
 import StepItem, { StepItemProps } from '../../../../components/molecules/StepItem';
 
 export default {
-  title: 'Components/Molecules/StepItem',
+  title: 'components/molecules/StepItem',
   component: StepItem,
 } as Meta;
 

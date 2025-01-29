@@ -1,5 +1,5 @@
 import cx from 'classnames';
-import NumberFormat from 'react-number-format';
+import { NumericFormat } from "react-number-format";
 
 interface TableRowProps {
     title: string;
@@ -43,7 +43,7 @@ export default function TableRow(props: TableRowProps) {
       </td>
       <td>
         <p className="fw-medium text-start color-palette-1 m-0">
-          <NumberFormat
+          <NumericFormat
             value={price}
             prefix="Rp. "
             displayType="text"
